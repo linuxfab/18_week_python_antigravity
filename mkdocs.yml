@@ -3,6 +3,7 @@ site_name: "18 週 Python 遊戲開發：Vibe Coding 戰術指南"
 site_url: https://linuxfab.github.io/18_week_python_antigravity/
 repo_url: https://github.com/linuxfab/18_week_python_antigravity
 edit_uri: edit/main/
+docs_dir: .
 
 theme:
   name: material
