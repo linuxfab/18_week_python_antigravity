@@ -5,7 +5,9 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -13,19 +15,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
       - name: Install dependencies
-        run: |
-          pip install mkdocs-material
+        run: pip install mkdocs-material
 
-      - name: Build and Deploy to GitHub Pages
+      - name: Prepare docs directory
         run: |
-          mkdocs gh-deploy --force
+          mkdir -p docs
+          cp README.md docs/index.md
+          cp syllabus.md docs/syllabus.md
+          cp -r lessons docs/
+
+      - name: Build with MkDocs
+        run: mkdocs build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
