@@ -1,0 +1,75 @@
+# mkdocs.yml
+site_name: "18 週 Python 遊戲開發：Vibe Coding 戰術指南"
+site_url: https://linuxfab.github.io/18_week_python_antigravity/
+repo_url: https://github.com/linuxfab/18_week_python_antigravity
+edit_uri: edit/main/
+
+theme:
+  name: material
+  language: zh-Hant
+  icon:
+    logo: material/controller-classic
+  palette:
+    # 支援自動切換深色/淺色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切換到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切換到淺色模式
+  features:
+    - navigation.tabs           # 頂部選單
+    - navigation.sections       # 側邊欄區塊
+    - navigation.top            # 回到頂部按鈕
+    - search.suggest            # 搜尋語法建議
+    - search.highlight          # 搜尋結果高亮
+    - content.code.copy         # 程式碼一鍵複製
+    - content.code.annotate     # 程式碼註解功能
+
+markdown_extensions:
+  - admonition                  # 支援 Alert/Note 區塊
+  - pymdownx.details            # 支援折疊區塊
+  - pymdownx.superfences         # 支援複雜的程式碼嵌套
+  - pymdownx.highlight:         # 程式碼高亮
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+# 導航結構
+nav:
+  - 首頁: README.md
+  - 🎮 基礎入門 (Week 1-4):
+    - 第 01 週 | Hello Pygame: lessons/week01/handout.md
+    - 第 02 週 | 座標系統入門: lessons/week02/handout.md
+    - 第 03 週 | 遊戲迴圈與心跳: lessons/week03/handout.md
+    - 第 04 週 | 變數與自動移動: lessons/week04/handout.md
+  - 🕹️ 核心邏輯 (Week 5-8):
+    - 第 05 週 | 鍵盤控制與邊界: lessons/week05/handout.md
+    - 第 06 週 | 身體結構 List: lessons/week06/handout.md
+    - 第 07 週 | 函數與代碼重構: lessons/week07/handout.md
+    - 第 08 週 | 隨機數與食物生成: lessons/week08/handout.md
+  - 🍎 遊戲進化 (Week 9-12):
+    - 第 09 週 | 碰撞檢測與成長: lessons/week09/handout.md
+    - 第 10 週 | UI 分數顯示系統: lessons/week10/handout.md
+    - 第 11 週 | 遊戲狀態機管理: lessons/week11/handout.md
+    - 第 12 週 | OOP 物件導向架構: lessons/week12/handout.md
+  - ✨ 視覺聽覺與拋光 (Week 13-16):
+    - 第 13 週 | HSV 彩虹與特效: lessons/week13/handout.md
+    - 第 14 週 | Sound 音效回饋: lessons/week14/handout.md
+    - 第 15 週 | 難度曲線平衡: lessons/week15/handout.md
+    - 第 16 週 | 繼承與多型應用: lessons/week16/handout.md
+  - 🏁 最終決戰 (Week 17-18):
+    - 第 17 週 | Debugging 專業修煉: lessons/week17/handout.md
+    - 第 18 週 | 打包發佈與成果發表: lessons/week18/handout.md
