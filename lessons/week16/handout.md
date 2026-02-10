@@ -1,73 +1,99 @@
-# 第 16 週 | 擴充功能：超能力與基因工程
+# 第 16 週 | 基因工程：繼承與多型 (Advanced OOP)
 
-> **給老師的備課筆記**：
-> 這一週我們要玩轉 OOP 的進階技巧：**繼承 (Inheritance)**。
-> 比起從頭寫一個新類別，繼承能讓你少寫 80% 的廢話。
-> 重點：強調「多型 (Polymorphism)」—— 讓主程式不用關心對手是誰，只要知道它能「被吃」。
-
----
-
-## 🎯 本週教學目標
-
-1.  **繼承 (Inheritance)**：父與子的關係，如何子承父業。
-2.  **多型 (Polymorphism)**：同一個方法名稱，根據物件不同而有不同行為。
-3.  **創意擴充**：如何快速增加多樣化的遊戲道具。
+> **給教練的戰術板 (Coach's Corner)**：
+> 這一週我們要用 OOP 最強大的武器：**繼承 (Inheritance)**。
+> 比起從頭寫一個 `class Poison` 和 `class Food`，繼承能讓你少寫 80% 的廢話。
+> 重點：強調 **「多型 (Polymorphism)」** —— 讓主程式不用關心對手是誰，只要知道它能「被吃」。
+> 這是程式設計師的 **偷懶 (Efficiency)** 美學。
 
 ---
 
-## 💡 深度比喻：超級英雄的披風 (Inheritance)
+## 🎯 本週攻略目標 (Mission Objectives)
 
-*   **普通人 (Food)**：有生命、能移動、有名字。
-*   **超能者 (PowerUp)**：繼承了普通人的所有特徵，但**多了一個**「飛翔」或「隱形」的能力。
-*   **程式翻譯**：
-    *   `class Food`: 基礎
-    *   `class Poison(Food)`: 它繼承了座標、繪圖方法，但修改了「被吃掉後的得分邏輯」。
+1.  **繼承 (Inheritance)**：父與子的關係。如何不勞而獲 (繼承父類的程式碼)。
+2.  **覆寫 (Override)**：青出於藍。子類別如何修改父類別的行為。
+3.  **多型 (Polymorphism)**：把一堆不同的東西裝在同一個 List 裡，並統一呼叫同一個方法。
 
 ---
 
-## 📝 程式碼拆解 (繼承的魔法)
+## 📊 簡報精華 (Slide Highlights)
 
-### 1. 覆寫方法 (Override)
+### Slide 1: 超級英雄的披風 (The Cape)
+*   **普通人 (Base Class)**：`Person`。會走路、會說話。
+*   **超人 (Sub Class)**：`Class Superman(Person)`。
+    *   他 **繼承** 了普通人的一切 (不用重寫走路和說話)。
+    *   但他 **多了一個** `fly()` 方法。
+    *   他 **覆寫 (Overwrite)** 了 `strength` 屬性 (變得超強)。
+*   這就是繼承。你不需要重新發明輪子，你只要幫輪子裝上火箭推進器。
+
+### Slide 2: 貪食蛇的軍火庫 (The Arsenal)
+*   **Food (父)**：基礎食物。吃了+1分。
+*   **Poison (子)**：毒藥。繼承 Food，但吃了扣分 (或是死掉)。
+*   **GoldenApple (子)**：金蘋果。繼承 Food，但吃了+50分。
+*   他們 **都是 (is-a)** Food。所以可以放在同一個清單 `items = []` 裡。
+
+### Slide 3: 隨機生成器 (Loot Table)
 ```python
-class GoldenApple(Food):
+possible_items = [Food, Poison, GoldenApple]
+ItemClass = random.choices(possible_items, weights=[70, 20, 10])[0]
+new_item = ItemClass() # 生產！
+```
+*   這行程式碼讓我們可以像上帝一樣，根據機率創造萬物。
+
+---
+
+## 📝 程式碼邏輯拆解 (Code Breakdown)
+
+### 1. 繼承的語法
+```python
+class GoldenApple(Food): # 括號裡寫爸爸的名字
+    def __init__(self):
+        super().__init__() # 記得先呼叫爸爸的初始化！(孝道)
+        self.color = GOLD  # 然後再改成自己的顏色
+        
     def effect(self, snake):
-        # 普通蘋果加 10，金蘋果加 50！
-        return 50
+        return 50 # 覆寫：金蘋果價值連城
 ```
 
-### 2. 隨機生成器
+### 2. 多型的威力 (The Power of Polymorphism)
+在主迴圈裡：
 ```python
-items = [Food(), Poison(), GoldenApple()]
-item = random.choice(items)
-# 這裡最神：不管是哪種 item，我們都只要執行這兩行
+# item 可能是毒藥，也可能是蘋果，程式碼完全不用改！
 item.draw(screen)
 score += item.effect(snake)
 ```
-這就是**多型**！主程式不需要寫 `if item == poison... else if apple...`。
+如果沒有多型，你就要寫：
+```python
+if type(item) == Food: score += 1
+elif type(item) == Poison: score -= 10
+elif type(item) == GoldenApple: score += 50
+...
+```
+這就是一般的爛程式碼 (`Spaghetti Code`) 與架構師的差別。
 
 ---
 
-## ✨ Vibe Coding 小撇步：浮空文字 (Floating Text)
+## 🏋️‍♂️ 實戰演練 (Hands-on Labs)
 
-*   **即時反饋**：吃到好東西時，在食物的位置出現一個「+50」的文字並緩緩飄上去消失。這會讓玩家覺得自己「賺大了」。
-*   **顏色對比**：毒蘋果用紫色、加速用黃色、普通蘋果用紅色。利用顏色心理學指引玩家。
+### 🟢 基礎題 (Item Factory)
+1.  **毒蘑菇**：創造一個 `Mushroom` 類別，繼承自 Food。
+    *   顏色：紫色。
+    *   效果：吃了之後，蛇的速度變慢一半 (持續 5 秒)。(Debuff)
+2.  **幸運草**：創造一個 `Clover` 類別。
+    *   顏色：綠色。
+    *   效果：吃了之後，下一次撞牆不會死 (無敵護盾)。
+
+### 🟡 進階題 (Polymorphic Boss)
+1.  **動態道具**：
+    *   讓 `GoldenApple` 不會乖乖待在原地，而是會每秒鐘隨機跳動一次 (繼承 `Food` 的 `update` 方法並改寫它)。
+    *   這會讓遊戲變成「打地鼠」。
+2.  **時空裂縫 (Portal)**：
+    *   這有點難。繼承 Food，但它是一對 (A 和 B)。
+    *   當蛇頭碰到 A，直接把蛇頭座標改成 B。
+    *   這需要你修改 `effect` 方法，讓它能存取 `snake` 物件並修改其座標。
 
 ---
 
-## ⚠️ 常見陷阱 (Pitfalls)
-
-*   **忘記呼叫 super()**：如果你在子類別自定義了 `__init__` 卻忘了寫 `super().__init__()`，爸爸預設好的屬性（比如座標）就不會幫你設定好。
-*   **過度繼承**：不要繼承太多層（爺爺、老爺爺...），這會讓你的程式碼變得很難找 Bug。
-
----
-
-## 🏋️‍♂️ 課後練習
-
-1.  **磁鐵道具 (Magnet)**：繼承 Food，吃到後讓蛇在接下來 10 秒內可以自動「吸」附近的食物。
-2.  **時空裂縫 (Portal)**：生一組傳送門食物，吃到 A 從 B 出現。
-
----
-
-## 📚 參考來源
-*   [Inheritance vs Composition](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance) (工程師的經典辯論)
-*   [The power of Polymorphism in Games](https://www.toptal.com/game/video-game-design-patterns)
+## 📚 寶藏連結 (Reference)
+*   [Inheritance vs Composition](https://stackoverflow.com/questions/49002/prefer-composition-over-inheritance) (工程師的經典辯論，以後你會懂的)
+*   [Design Patterns: Factory Method](https://refactoring.guru/design-patterns/factory-method) (如何優雅地生產物件)

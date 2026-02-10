@@ -1,88 +1,89 @@
-# 第 01 週 | Vibe Coding 體驗：Hello Pygame
+# 第 01 週 | Vibe Coding 覺醒：Hello Pygame！
 
-> **給老師的備課筆記 (Lesson Notes)**：
-> 本週重點在於「**視覺回饋**」與「**建立信心**」。不要過度糾結於 Python 的變數型別或詳細語法，而是讓學生理解「**因為我寫了這行程式，所以視窗出現了**」的因果關係。
-
----
-
-## 🎯 本週教學目標 (Learning Objectives)
-
-1.  **環境驗證**：確認學生能透過 `uv` 建置專案並執行 Python。
-2.  **理解結構**：掌握遊戲開發的三大支柱 —— **Setup (設定)**、**Game Loop (迴圈)**、**Event (事件)**。
-3.  **Vibe Coding**：體驗透過程式碼控制視覺（顏色、視窗）的成就感。
+> **給教練的戰術板 (Coach's Corner)**：
+> 這週不是要教「程式語法」，而是要點燃「創造的神火」。
+> 別管什麼變數型別了，重點是讓學生感受到 **「因為我敲了鍵盤，螢幕就聽話了」** 的絕對掌控感。
+> 我們要的是 **視覺回饋 (Visual Feedback)**，我們要的是 **信心 (Confidence)**。
+> 讓他們覺得自己像個駭客，而不只是個學生。
 
 ---
 
-## 📊 教學投影片大綱 (Slides Outline)
+## 🎯 本週攻略目標 (Mission Objectives)
+
+1.  **環境解鎖**：確認 `uv` 運作正常，Python 蓄勢待發。
+2.  **掌握核心**：參透遊戲靈魂三元素 —— **Setup (佈局)**、**Game Loop (心跳)**、**Event (感官)**。
+3.  **Vibe Check**：第一次用程式碼控制視窗顏色，感受那種「我就是神」的快感。
+
+---
+
+## 📊 簡報精華 (Slide Highlights)
 
 ### Slide 1: Welcome to Vibe Coding (喚醒你的遊戲靈魂)
-*   **核心提問**：為什麼我們要學程式？
-*   **內容**：
-    *   拒絕枯燥：我們不從 `print("Hello World")` 開始，我們直接開啟一個世界。
-    *   專案目標：18 週後，你將擁有一款自己打造、有聲光效果的「貪食蛇」。
-*   **視覺**：展示最終成品的截圖或 GIF。
+*   **靈魂拷問**：為什麼要學程式？為了考試？還是為了創造世界？
+*   **拒絕無聊**：`print("Hello World")` 這種老掉牙的東西我們先放一邊。我們要直接在這個漆黑的螢幕上，開天闢地。
+*   **終極願景**：18 週後，你將擁有一款獨一無二、自帶 BGM 的「貪食蛇」大作。
 
-### Slide 2: 認識你的武器庫 (Tools of the Trade)
-*   **Python**：我們的魔法咒語。
-*   **Pygame-ce**：最強大的 2D 遊戲引擎 (Community Edition)。
-*   **Antigravity IDE**：你的 AI 副駕駛。
-*   **指令時間**：
+### Slide 2: 你的武器庫 (The Arsenal)
+*   **Python**：你的魔法咒語書。
+*   **Pygame-ce**：最強大的 2D 遊戲引擎 (Community Edition) —— 這是你的畫布。
+*   **Antigravity IDE**：你的 AI 副駕駛 (Copilot)，隨時準備救援。
+*   **戰鬥指令**：
     ```bash
-    uv init
-    uv add pygame-ce
+    uv init           # 召喚專案
+    uv add pygame-ce  # 裝備引擎
     ```
 
-### Slide 3: 遊戲的解剖學 (The Anatomy of a Game)
-*   **比喻**：遊戲就像一個永遠不會停下來的翻頁動畫書。
-    1.  **Setup (大腦)**：設定視窗大小、載入資源。
-    2.  **Game Loop (心臟)**：`while True`，只要活著就不斷跳動。
-    3.  **Event (感官)**：偵測鍵盤按下、滑鼠移動。
-    4.  **Render (臉)**：`flip()`，將畫好的畫面以此呈現。
+### Slide 3: 遊戲的解剖學 (Anatomy of a Game)
+*   **神比喻**：遊戲就像一本永遠翻不完的動畫書。
+    1.  **Setup (大腦)**：設定視窗多大？載入什麼圖片？這是遊戲的「出生設定」。
+    2.  **Game Loop (心臟)**：`while True` —— 只要心臟還在跳 (True)，遊戲就活著。
+    3.  **Event (感官)**：按了空白鍵？動了滑鼠？遊戲必須「感覺」到玩家的操作。
+    4.  **Render (臉面)**：`flip()` —— 把畫好的下一頁翻出來給你看。
 
-### Slide 4: 第 01 號任務 (Mission 01)
-*   **目標**：讓一個黑色的視窗出現在螢幕上，並且能由你控制關閉。
-*   **Vibe Check**：試試看按下空白鍵，能不能改變世界的顏色？
+### Slide 4: Mission 01 - 第一次接觸
+*   **任務**：召喚一個黑色視窗，證明你已經控制了電腦。
+*   **Vibe Check**：試試看按下 **空白鍵**，能不能讓整個世界變色？
 
 ---
 
 ## 📝 程式碼邏輯拆解 (Code Breakdown)
 
-### 1. 為什麼需要 `while True`？
-新手常見疑問：「為什麼遊戲視窗一閃就消失了？」
-*   **解釋**：程式碼預設是「由上而下」執行完就結束。
-*   **解法**：遊戲需要一直存在，所以我們用一個**無限迴圈 (Infinite Loop)** 把它「困住」，直到玩家說停為止。
+### 1. `while True`：為什麼要無限迴圈？
+新手常問：「為什麼視窗出來一下就不見了？」
+*   **因為程式跑完了啊！** 程式預設是由上往下跑，跑完就下班。
+*   **Vibe Solution**：我們用 `while True` 設下一個「時間結界」，把程式困在裡面，直到我們允許它離開 (玩家按關閉)。這就是遊戲的**命**。
 
-### 2. 什麼是 `pygame.event.get()`？
-新手常見疑問：「為什麼視窗卡住轉圈圈 (Not Responding)？」
-*   **解釋**：作業系統 (Windows) 會一直問視窗：「你還活著嗎？」，如果程式忙著跑迴圈而不回應作業系統的訊號 (Events)，就會被判定為當機。
-*   **解法**：必須在迴圈每一幀都檢查並處理事件 (Pump events)。
+### 2. `pygame.event.get()`：甚至連視窗都需要關愛
+新手常問：「為什麼視窗卡死轉圈圈 (Not Responding)？」
+*   **因為它自閉了。** Windows 作業系統會一直問視窗：「欸你還活著嗎？」，如果程式只顧著跑迴圈不理人，就會被當作當機。
+*   **Vibe Solution**：每一幀 (Frame) `pygame.event.get()` 都要出來「社交」一下，回應作業系統的確認，並檢查有沒有人按鍵盤。
 
-### 3. 鍵盤控制邏輯 (Keyboard Logic)
-在 `demo.py` 中，我們示範了最基礎的控制：
+### 3. 鍵盤邏輯：輸入 -> 輸出
+在 `demo.py` 裡，我們寫下了第一行互動邏輯：
 ```python
 if event.key == pygame.K_SPACE:
-    # 切換顏色的邏輯
+    # 變色吧！世界！
 ```
-這雖然還沒讓蛇移動，但已經建立了「**輸入 (Input) -> 處理 (Process) -> 輸出 (Output)**」的核心邏輯。
+這就是遊戲設計的原子模型：**Input (按鍵) -> Process (判斷) -> Output (變色)**。
 
 ---
 
-## 🏋️‍♂️ 動手試試看 (Hands-on Exercises)
+## 🏋️‍♂️ 實戰演練 (Hands-on Labs)
 
-### 🟢 基礎題 (Basic)
-1.  **成功執行**：下載並執行 `demo.py`，確認視窗出現。
-2.  **安全退出**：試著按 ESC 鍵與視窗右上角的 X，確認都能關閉程式。
+### 🟢 基礎題 (Basic Vibe)
+1.  **成功啟動**：執行 `demo.py`，看到視窗跳出來的那一刻，深吸一口氣 —— 你做到了。
+2.  **優雅退場**：試著按 `ESC` 鍵或視窗右上角的 `X`，確認你能優雅地結束程式，而不是讓它當掉。
 
-### 🟡 進階題 (Advanced Vibe)
-1.  **色彩大師**：
-    *   打開 [Google Color Picker](https://g.co/kgs/colorpicker)，挑選一個你喜歡的顏色 (例如 `Neon Pink`)。
-    *   修改程式碼中的 `pixel_color` 變數，讓按下空白鍵時變成你的專屬色。
-2.  **鍵盤駭客**：
-    *   目前程式只對 `UP` (上) 有反應。
-    *   **挑戰**：加入 `K_LEFT`, `K_RIGHT` 的偵測，並讓它印出不同的訊息 (例如 "Turning Left!")。
+### 🟡 進階題 (Hacker Vibe)
+1.  **色彩大師 (Color Master)**：
+    *   打開 [Google Color Picker](https://g.co/kgs/colorpicker)，挑一個最騷包的顏色 (例如 `Neon Pink` #FF6EC7)。
+    *   修改程式碼中的 `pixel_color`，讓按下空白鍵時，視窗炸出你的專屬色。
+2.  **鍵盤駭客 (Keyboard Hacker)**：
+    *   目前只有 `UP` 鍵有反應？太遜了。
+    *   **挑戰**：加入 `K_LEFT`, `K_RIGHT` 的偵測，並讓它印出 "Turning Left!" 或 "Drifting Right!"。讓終端機 (Terminal) 變身你的儀表板。
 
 ---
 
-## 📚 參考資源 (References)
-*   [Pygame-ce 官方文檔](https://pyga.me/docs/)
-*   [Python 顏色代碼表 (RGB)](https://www.rapidtables.com/web/color/RGB_Color.html)
+## 📚 寶藏連結 (References)
+*   [Pygame-ce 官方聖經](https://pyga.me/docs/)
+*   [RGB 顏色代碼表](https://www.rapidtables.com/web/color/RGB_Color.html) —— 設計師的調色盤
