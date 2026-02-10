@@ -1,3 +1,12 @@
+### 2026-02-10 09:10:00
+*   **重點**: 重構專案結構以支援 MkDocs 自動化網站發佈。
+*   **影響**:
+    *   **結構重組**: 建立 `docs` 資料夾，將 `README.md` 轉為 `index.md`，並將 `lessons` 與 `syllabus.md` 移入 `docs`。這是 MkDocs 的標準規範，確保文件編譯穩定。
+    *   **CI/CD 優化**: 改用 GitHub 官方推薦的現代化部署方案 (`actions/deploy-pages`)，大幅提升部署速度與穩定性。
+    *   **設定提醒**: 指出需要在 GitHub Repo 設定中將 Pages 的 Source 切換為 "**GitHub Actions**" 才能完成最後一哩路。
+*   **結果**: 教材現在具備標準化的文件存放結構，且已準備好透過 GitHub Pages 進行高品質的靜態導覽。
+*   **更新者**: Antigravity Agent
+
 ### 2026-02-10 09:00:00
 *   **重點**: 部署 GitHub Pages 自動化流程與課程定位微調。
 *   **影響**:
