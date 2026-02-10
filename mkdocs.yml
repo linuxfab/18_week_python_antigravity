@@ -4,6 +4,13 @@ site_url: https://linuxfab.github.io/18_week_python_antigravity/
 repo_url: https://github.com/linuxfab/18_week_python_antigravity
 edit_uri: edit/main/
 docs_dir: .
+exclude_docs:
+  - mkdocs.yml
+  - .github/
+  - .agent/
+  - agent-logs.md
+  - .gemini/
+  - syllabus.md
 
 theme:
   name: material
