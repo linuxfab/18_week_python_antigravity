@@ -1,3 +1,12 @@
+### 2026-02-15 22:40:00
+*   **重點**: 為第十七週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week17/thoughts.MD`，記錄學生對 Traceback 解讀、Rubber Duck Debugging 以及效能殺手排查的學習體悟。
+    *   新增 `docs/lessons/week17/quiz.md`，檢測 Traceback 解讀、`global` 關鍵字陷阱及效能優化原則。
+    *   更新 `mkdocs.yml`，將 Week 17 的測驗掛載至導覽。
+*   **結果**: 課程進入最終決戰階段，學生已從「能寫」提升至「能修、能調、能防」的職業素養。
+*   **更新者**: Antigravity Agent
+
 ### 2026-02-15 22:25:00
 *   **重點**: 為第十六週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
