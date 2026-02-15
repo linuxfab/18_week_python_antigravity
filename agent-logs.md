@@ -1,3 +1,12 @@
+### 2026-02-15 20:00:00
+*   **重點**: 為第九週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week09/thoughts.MD`，描述學生對於碰撞檢測、Boolean 旗標與遊戲打擊感 (Juiciness) 的學習感悟。
+    *   新增 `docs/lessons/week09/quiz.md`，檢測碰撞邏輯與蛇身成長原理。
+    *   更新 `mkdocs.yml`，將 Week 09 的測驗納入網站導覽。
+*   **結果**: 課程正式跨入「遊戲模擬」階段，學生能體會到從純代碼到產生物理反饋的成就感。
+*   **更新者**: Antigravity Agent 使用 Claude Opus 4.6 生成
+
 ### 2026-02-15 19:52:00
 *   **重點**: 為第八週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
