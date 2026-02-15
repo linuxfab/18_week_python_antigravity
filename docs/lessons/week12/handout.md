@@ -13,7 +13,30 @@
 
 1.  **類別 (Class)**：學會畫設計圖 (Blueprint)。
 2.  **實例 (Instance)**：學會從設計圖量產物件 (Object)。
-3.  **封裝 (Encapsulation)**：把髒東西 (資料與邏輯) 包在膠囊裡，保持主程式乾淨。
+3.  **封裝 (Encapsulation)**：把資料與邏輯包在一起。
+
+### 🏗️ 物件導向架構圖
+
+```mermaid
+classDiagram
+    class Snake {
+        +list body
+        +tuple direction
+        +bool should_grow
+        +int block_size
+        +__init__()
+        +handle_keys(key)
+        +move()
+        +draw(surface)
+    }
+    class Food {
+        +tuple position
+        +int block_size
+        +__init__()
+        +randomize_position()
+        +draw(surface)
+    }
+```
 
 ---
 

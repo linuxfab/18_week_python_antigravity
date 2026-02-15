@@ -13,15 +13,15 @@ theme:
     # 支援自動切換深色/淺色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: deep purple
+      accent: lime
       toggle:
         icon: material/brightness-7
         name: 切換到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: indigo
+      accent: lime
       toggle:
         icon: material/brightness-4
         name: 切換到淺色模式
@@ -29,6 +29,7 @@ theme:
     - navigation.tabs           # 頂部選單
     - navigation.sections       # 側邊欄區塊
     - navigation.top            # 回到頂部按鈕
+    - navigation.tracking       # 追蹤當前位置
     - search.suggest            # 搜尋語法建議
     - search.highlight          # 搜尋結果高亮
     - content.code.copy         # 程式碼一鍵複製
@@ -37,7 +38,11 @@ theme:
 markdown_extensions:
   - admonition                  # 支援 Alert/Note 區塊
   - pymdownx.details            # 支援折疊區塊
-  - pymdownx.superfences         # 支援複雜的程式碼嵌套
+  - pymdownx.superfences:       # 支援複雜的程式碼嵌套
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.mermaid_format
   - pymdownx.highlight:         # 程式碼高亮
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -46,6 +51,9 @@ markdown_extensions:
       alternate_style: true
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
 
 # 導航結構
 nav:
