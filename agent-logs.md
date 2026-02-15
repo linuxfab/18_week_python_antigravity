@@ -2,49 +2,38 @@
 *   **重點**: 為第二週課程生成獨立的學生學習心得 (Thoughts)。
 *   **影響**: 新增 `docs/lessons/week02/thoughts.MD`，使專案結構更趨向標準化。
 *   **結果**: 提供了關於座標系統與 RGB 煉金術的深度學習回顧，並確保每週教材結構一致。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 gemini 3 flash 生成
 
 ### 2026-02-15 19:42:00
 *   **重點**: 重新生成第一週課程學生學習心得 (Thoughts)，優化內容結構。
 *   **影響**: 更新 `docs/lessons/week01/thoughts.MD`，確保內容純化並維持高品質回饋。
 *   **結果**: 提供了更佳的課程起始回顧。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 gemini 3 flash 生成
 
 ### 2026-02-15 20:10:00
 *   **重點**: 為第六週課程生成學生學習心得 (Thoughts)。
 *   **影響**: 新增 `docs/lessons/week06/thoughts.MD`，以高一新生角色撰寫，涵蓋 demo.py、handout.md 與 quiz.md。
 *   **結果**: 提供了關於 List/FIFO 概念、彩虹漸層蛇身與隨堂測驗的綜合學習回饋。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 Claude Opus 4.6 生成
 
 ### 2026-02-15 20:05:00
 *   **重點**: 為第五週課程生成學生學習心得 (Thoughts)。
 *   **影響**: 新增 `docs/lessons/week05/thoughts.MD`，以高一新生角色撰寫完成。
 *   **結果**: 提供了關於鍵盤操控、if-elif 邏輯與慣性運動的學習回饋，含五週里程碑回顧表格。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 Claude Opus 4.6 生成
 
 ### 2026-02-15 19:55:00
 *   **重點**: 為第四週課程生成學生學習心得 (Thoughts)。
 *   **影響**: 新增 `docs/lessons/week04/thoughts.MD`，以高一新生角色撰寫完成。
 *   **結果**: 提供了關於變數、運動學與碰撞反彈的學習回饋。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 gemini 3 Pro(high) 生成
 
 ### 2026-02-15 19:40:00
 *   **重點**: 為第三週課程生成學生學習心得 (Thoughts)。
 *   **影響**: 新增 `docs/lessons/week03/thoughts.MD`，以高一新生角色撰寫完成。
 *   **結果**: 提供了關於 Game Loop 與數學特效的學習回饋。
-*   **更新者**: Antigravity Agent
+*   **更新者**: Antigravity Agent 使用 gemini 3 Pro(high) 生成
 
-### 2026-02-15 19:30:00
-*   **重點**: 為第二週課程生成學生學習心得 (Thoughts)。
-*   **影響**: 更新 `docs/lessons/week01/thoughts.MD`，加入第二週「座標系與形狀」的心得。
-*   **結果**: 強化了教材的連續性與學生的代入感。
-*   **更新者**: Antigravity Agent
-
-### 2026-02-15 19:20:00
-*   **重點**: 為第一週課程生成學生學習心得 (Thoughts)。
-*   **影響**: 新增 `docs/lessons/week01/thoughts.MD`，以高一新生角色撰寫完成。
-*   **結果**: 提供了真實的學習視角回饋，有助於補充課程的實踐感。
-*   **更新者**: Antigravity Agent
 
 ### 2026-02-10 09:15:00
 *   **重點**: 課程開發完成與自動化部署環境最終建置。
