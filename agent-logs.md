@@ -1,3 +1,12 @@
+### 2026-02-15 19:52:00
+*   **重點**: 為第八週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week08/thoughts.MD`，描述學生對隨機數 (Random)、網格對齊 (Grid Alignment) 與轉蛋機率設計的學習反思。
+    *   新增 `docs/lessons/week08/quiz.md`，檢測隨機數應用與 `global` 變數觀念。
+    *   更新 `mkdocs.yml`，將 Week 08 的測驗納入網站導覽。
+*   **結果**: 強調了遊戲設計不可或缺的「不確定性」要素與網格遊戲的數學基礎。
+*   **更新者**: Antigravity Agent 使用 gemini 3 Pro(high) 生成
+
 ### 2026-02-15 19:50:00
 *   **重點**: 為第七週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
