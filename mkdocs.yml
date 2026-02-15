@@ -92,9 +92,11 @@ nav:
       - 第 10 週 | UI 分數顯示系統:
           - 📖 教學講義: lessons/week10/handout.md
           - 💻 範例程式: lessons/week10/demo_code.md
+          - 📝 隨堂測驗: lessons/week10/quiz.md
       - 第 11 週 | 遊戲狀態機管理:
           - 📖 教學講義: lessons/week11/handout.md
           - 💻 範例程式: lessons/week11/demo_code.md
+          - 📝 隨堂測驗: lessons/week11/quiz.md
       - 第 12 週 | OOP 物件導向架構:
           - 📖 教學講義: lessons/week12/handout.md
           - 💻 範例程式: lessons/week12/demo_code.md

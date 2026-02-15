@@ -1,3 +1,12 @@
+### 2026-02-15 20:15:00
+*   **重點**: 為第十、十一週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week10/thoughts.MD` 與 `quiz.md`（聚焦 UI 渲染與圖層順序）。
+    *   新增 `docs/lessons/week11/thoughts.MD` 與 `quiz.md`（聚焦 Game Over 狀態與重置邏輯）。
+    *   更新 `mkdocs.yml`，將這兩週的測驗納入導覽。
+*   **結果**: 課程接近完整，涵蓋了從視覺回饋到遊戲狀態循環的完整體驗。
+*   **更新者**: Antigravity Agent 使用 Claude Opus 4.6 生成
+
 ### 2026-02-15 20:00:00
 *   **重點**: 為第九週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
