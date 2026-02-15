@@ -1,3 +1,12 @@
+### 2026-02-15 22:25:00
+*   **重點**: 為第十六週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week16/thoughts.MD`，描述學生對於繼承 (Inheritance) 與多型 (Polymorphism) 的深刻領悟，提升了程式碼架構的專業度。
+    *   新增 `docs/lessons/week16/quiz.md`，檢測繼承語法、`super()` 調用以及多型概念的應用。
+    *   更新 `mkdocs.yml`，將 Week 16 的隨堂測驗正式掛載至網站導覽。
+*   **結果**: 課程正式完成 OOP 進階篇章，學生已具備開發複雜道具系統與擴展功能的架構能力。
+*   **更新者**: Antigravity Agent 使用 gemini 3 Pro(high) 生成
+
 ### 2026-02-15 22:10:00
 *   **重點**: 為第十五週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
