@@ -1,3 +1,12 @@
+### 2026-02-15 20:30:00
+*   **重點**: 為第十二週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
+*   **影響**: 
+    *   新增 `docs/lessons/week12/thoughts.MD`，描述學生從程序式編程轉向物件導向 (OOP) 的心路歷程。
+    *   新增 `docs/lessons/week12/quiz.md`，檢測 Class 定義、`__init__` 與 `self` 關鍵字的理解。
+    *   更新 `mkdocs.yml`，將 Week 12 的測驗納入導覽。
+*   **結果**: 課程進入「創世神模式」，學生開始掌握架構設計的能力。
+*   **更新者**: Antigravity Agent 使用 Claude Opus 4.6 生成
+
 ### 2026-02-15 20:15:00
 *   **重點**: 為第十、十一週課程生成學生學習心得 (Thoughts) 與隨堂測驗 (Quiz)。
 *   **影響**: 
