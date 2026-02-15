@@ -3,7 +3,7 @@ description: 為 18 週 Python 課程自動生成每週教學資源包
 ---
 
 ## 1. 環境與進度確認
-* 讀取課程大綱: 檢查專案根目錄下的 `syllabus.md`（或 `課程大綱.md`）。
+* 讀取課程大綱: 檢查專案根目錄下的 `docs\syllabus.md`（或 `課程大綱.md`）。
 * 確認週次: 詢問使用者目前要生成第幾週（Week X）的內容。
 * 定義對象: 鎖定為「國中程度初學者」，語氣需親切、專業且詳細。
 
@@ -28,8 +28,8 @@ description: 為 18 週 Python 課程自動生成每週教學資源包
     * ### 參考來源 (附上 URL)
 
 ## 5. 自動化檔案存檔 (使用 Filesystem)
-* 將範例程式碼存至 `./lessons/weekX/demo.py`。
-* 將學生講義存至 `./lessons/weekX/handout.md`。
+* 將範例程式碼存至 `./docs/lessons/weekX/demo.py`。
+* 將學生講義存至 `./docs/lessons/weekX/handout.md`。
 * (選用) 將講義副本存至您的 Obsidian 指定路徑。
 
 ## 6. 完成回報
